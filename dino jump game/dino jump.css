@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.score{
+    font-size: 2vw;
+    font-weight: 200;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.over{
+    font-size: larger;
+    /* position: absolute;
+    top: 30vh;
+    left: 40vw; */
+    background-color:#C05358 ;
+    /* height:10vh ; */
+    display: flex;
+    padding: 3% 8% 3% 8%;
+    margin: 20% 10%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline 20%;
+    animation: visi 0.7s linear infinite;
+    visibility: hidden;
+}
+
+.container{
+    background-repeat: no-repeat;
+    background-image: url(background.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    /* background-size: contain; */
+}
+
+.dino{
+    background-image: url(dino.png);
+    height: 17vh;
+    width: 30vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 9vh;
+    left: 5vw;
+    /* border: solid black; */
+}
+
+.obstacle{
+    background-image: url(obstacle.png);
+    height: 20vh;
+    width: 25vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 6vh;
+    right: 4vw;
+    /* border: solid black; */
+}
+
+.obsAni{
+    animation: obstacleMove 6s linear infinite;
+}
+
+.dinoAni{
+    animation: dinoJump 1.2s linear infinite;
+}
+
+@keyframes obstacleMove{
+    0%{
+        left: 100vw;
+
+    }
+    100%{
+        left: -15vw;
+    }
+}
+
+@keyframes dinoJump{
+    0%{
+        bottom: 7vh;
+    }
+    50%{
+        bottom: 35vh;
+    }
+    100%{
+        bottom: 7vh;
+    }
+}
+
+@keyframes visi{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
